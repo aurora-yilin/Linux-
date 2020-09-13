@@ -290,6 +290,16 @@ Warning:World-writable config file is ignored
 
 出现这个警告的时候，我意识到估计这是配置文件又没被加载成功，经过查询，才知道引起这种原因可能是因为配置文件的权限问题，因为从机是docker的容器跑起来的然后将从机的配置文件映射到docker宿主机的一个配置文件上，这个时候就会产生容器读取配置文件的时候产生权限不足的问题，此时只需要找到从机容器配置文件在docker 宿主机上的映射文件，修改一下文件的权限即可。。。
 
+问题解决参考博客，https://stackoverflow.com/questions/53741107/mysql-in-docker-on-ubuntu-warning-world-writable-config-file-is-ignored
+
 # 四、总结
+
+总参考博客
+
+https://juejin.im/post/6844903921677238285
+
+https://blog.csdn.net/daicooper/article/details/79905660
+
+
 
 docker起的mysql容器真坑。。。。。
